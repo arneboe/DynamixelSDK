@@ -34,7 +34,7 @@ namespace dynamixel
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief The class for writing multiple Dynamixel data from different addresses with different lengths at once
 ////////////////////////////////////////////////////////////////////////////////
-class WINDECLSPEC GroupBulkWrite
+class GroupBulkWrite
 {
  private:
   PortHandler    *port_;

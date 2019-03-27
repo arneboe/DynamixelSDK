@@ -16,19 +16,7 @@
 
 /* Author: zerom, Ryu Woon Jung (Leon) */
 
-#if defined(__linux__)
-#include <unistd.h>
 #include "protocol2_packet_handler.h"
-#elif defined(__APPLE__)
-#include <unistd.h>
-#include "protocol2_packet_handler.h"
-#elif defined(_WIN32) || defined(_WIN64)
-#define WINDLLEXPORT
-#include <Windows.h>
-#include "protocol2_packet_handler.h"
-#elif defined(ARDUINO) || defined(__OPENCR__) || defined(__OPENCM904__)
-#include "../../include/dynamixel_sdk/protocol2_packet_handler.h"
-#endif
 
 #include <stdio.h>
 #include <string.h>

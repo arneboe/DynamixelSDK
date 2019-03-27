@@ -22,29 +22,6 @@
 #ifndef DYNAMIXEL_SDK_INCLUDE_DYNAMIXEL_SDK_PORTHANDLER_H_
 #define DYNAMIXEL_SDK_INCLUDE_DYNAMIXEL_SDK_PORTHANDLER_H_
 
-#if defined(__linux__)
-#define WINDECLSPEC
-#elif defined(__APPLE__)
-#define WINDECLSPEC
-#elif defined(_WIN32) || defined(_WIN64)
-  #ifdef WINDLLEXPORT
-  #define WINDECLSPEC __declspec(dllexport)
-  #else
-  #define WINDECLSPEC __declspec(dllimport)
-  #endif
-#elif defined(ARDUINO) || defined(__OPENCR__) || defined(__OPENCM904__)
-#define WINDECLSPEC
-#endif
-
-#ifdef __GNUC__
-#define DEPRECATED __attribute__((deprecated))
-#elif defined(_MSC_VER)
-#define DEPRECATED __declspec(deprecated)
-#else
-#pragma message("WARNING: You need to implement DEPRECATED for this compiler")
-#define DEPRECATED
-#endif
-
 #include <stdint.h>
 
 namespace dynamixel
@@ -53,7 +30,7 @@ namespace dynamixel
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief The class for port control that inherits PortHandlerLinux, PortHandlerWindows, PortHandlerMac, or PortHandlerArduino
 ////////////////////////////////////////////////////////////////////////////////
-class WINDECLSPEC PortHandler
+class PortHandler
 {
  public:
   static const int DEFAULT_BAUDRATE_ = 57600; ///< Default Baudrate

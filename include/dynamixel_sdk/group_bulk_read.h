@@ -34,7 +34,7 @@ namespace dynamixel
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief The class for reading multiple Dynamixel data from different addresses with different lengths at once
 ////////////////////////////////////////////////////////////////////////////////
-class WINDECLSPEC GroupBulkRead
+class GroupBulkRead
 {
  private:
   PortHandler    *port_;

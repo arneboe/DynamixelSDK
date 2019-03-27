@@ -31,7 +31,7 @@ namespace dynamixel
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief The class for control Dynamixel by using Protocol1.0
 ////////////////////////////////////////////////////////////////////////////////
-class WINDECLSPEC Protocol1PacketHandler : public PacketHandler
+class Protocol1PacketHandler : public PacketHandler
 {
  private:
   static Protocol1PacketHandler *unique_instance_;
